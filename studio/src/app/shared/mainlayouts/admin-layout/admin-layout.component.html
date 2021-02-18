@@ -1,0 +1,14 @@
+<div class="main-wrap">
+  <div class="links" *ngIf="auth.isAuthenticated()">
+    <ul class="list-links">
+      <li><a [routerLink]="['/admin', 'slider']" class="link">Slider</a></li>
+      <li><a [routerLink]="['/admin', 'posts']" class="link">Posts</a></li>
+    </ul>
+
+    <button class="btn-logout" (click)="logout($event)">Log out</button>
+  </div>
+  <div class="components">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
