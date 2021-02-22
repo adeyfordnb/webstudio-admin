@@ -22,11 +22,15 @@ export class LoginPageComponent implements OnInit {
   ) {  }
 
   ngOnInit(): void {
-    this.route.queryParams.subscribe((params: Params)=>{
+    this.route.queryParams.subscribe((params: Params) => {
       if(params['login_again']){
         this.message = 'Login again!'
       }
     })
+
+    if(this.auth.isAuthenticated()){
+      this.router.navigate(['/admin', 'slider'])
+    }
 
     this.form = new FormGroup({
       email: new FormControl(null, [

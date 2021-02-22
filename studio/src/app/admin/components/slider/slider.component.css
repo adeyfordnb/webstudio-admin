@@ -1,0 +1,14 @@
+.wrap {
+  width: 100%;
+  height: 100vh;
+  background-color: #161616;
+  display: flex;
+  flex-direction: row;
+}
+
+.sides {
+  width: 50%;
+  height: 100%;
+}
+
+
